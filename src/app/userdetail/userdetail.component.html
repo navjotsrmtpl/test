@@ -1,0 +1,22 @@
+<h1 class="txtcenter">User Detail Form</h1>
+
+<div class="bold">
+  <div class="container">
+    <div class="row margin" *ngFor="let userdetail of userlist">
+        <div class="margin"><strong>Name :</strong> {{userdetail.name}}</div>
+        <div class="margin"><strong>Username :</strong> {{userdetail.username}}</div>
+        <div class="margin"><strong>Email :</strong> {{userdetail.email}}</div>
+        <div class="margin"><strong>Website :</strong> {{userdetail.website}}</div>
+        <div class="margin"><strong>City :</strong> {{userdetail.address.city}}</div>
+        <div class="margin"><strong>Street :</strong> {{userdetail.address.street}}</div>
+        <div class="margin"><strong>Suite :</strong> {{userdetail.address.suite}}</div>
+        <div class="margin"><strong>Zipcode :</strong> {{userdetail.address.zipcode}}</div>
+        <div class="margin"><strong>Company Name :</strong> {{userdetail.company.name}}</div>
+        <div class="margin"><strong>Company Bs :</strong> {{userdetail.company.bs}}</div>
+        <div class="margin"><strong>Company CatchPhrase :</strong> {{userdetail.company.catchPhrase}}</div>
+
+
+    </div>
+  </div>
+</div>
+<button class="btn btn-primary margin" (click)="back()">Back</button>

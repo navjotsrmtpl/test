@@ -1,0 +1,16 @@
+<h1 class="txtcenter">User List</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+  </tr>
+    <tr *ngFor="let userlist of userslist;let i= index" (click)="gotoDetails(userlist)">
+          <td >{{userlist.name}}</td>
+          <td>{{userlist.username}}</td>
+          <td>{{userlist.email}}</td>
+
+      </tr>
+
+</table>
