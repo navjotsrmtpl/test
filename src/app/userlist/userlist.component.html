@@ -15,4 +15,4 @@
 
 </table>
 
-<app-userdetail [userInformation]="userData"></app-userdetail>
+<app-userdetail *ngIf='userData' [userInformation]="userData"></app-userdetail>

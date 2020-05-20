@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class UserlistComponent implements OnInit {
   userslist: any;
-  services: any;
   userData :any;
 
   constructor(private service:ServiceService, private router:Router) { }
@@ -20,14 +19,15 @@ export class UserlistComponent implements OnInit {
   }
 
   userlist(){
-   this.services =  this.service.api().subscribe((res:any)=>{
+    this.service.api().subscribe((res:any)=>{
       console.log(res);
       this.userslist= res;
     })
   }
 
   gotoDetails(data:any){
-    this.router.navigate(['/user-list'],{queryParams:{'id':data.id}})
+    this.userData = data;
+    // this.router.navigate(['/user-list'],{queryParams:{'id':data.id}})
 
   }
 
