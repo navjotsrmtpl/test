@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class UserlistComponent implements OnInit {
   userslist: any;
   services: any;
+  userData :any;
 
   constructor(private service:ServiceService, private router:Router) { }
 
@@ -26,8 +27,7 @@ export class UserlistComponent implements OnInit {
   }
 
   gotoDetails(data:any){
-
-    this.router.navigate(['/user-detail'],{queryParams:{'id':data.id}})
+    this.router.navigate(['/user-list'],{queryParams:{'id':data.id}})
 
   }
 

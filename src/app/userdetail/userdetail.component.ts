@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ServiceService } from '../service/service.service';
 import {Location} from '@angular/common';
@@ -12,11 +12,14 @@ export class UserdetailComponent implements OnInit {
   id: any;
   userlist: any=[];
   profileForm:any;
+  @Input() userInformation;
+  @Input() test;
 
-  constructor(private route:ActivatedRoute,private service:ServiceService,private router:Router, private location:Location) { }
+  constructor(private route:ActivatedRoute,private service:ServiceService,private router:Router, private location:Location) {
 
-  ngOnInit(): void {
+   }
 
+  ngOnInit(){
 
       this.route.queryParams
       .subscribe(params => {
@@ -28,6 +31,9 @@ export class UserdetailComponent implements OnInit {
 
         })
       });
+      // this.userlist = [];
+      // this.userlist = this.userInformation;
+      // console.log(this.userlist , 'jkhkjhkjhkjhkjh')
 
   }
 
