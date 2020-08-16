@@ -19,10 +19,10 @@ export class UserlistComponent implements OnInit {
   }
 
   userlist(){
-    this.service.api().subscribe((res:any)=>{
-      console.log(res);
-      this.userslist= res;
-    })
+    // this.service.api().subscribe((res:any)=>{
+    //   console.log(res);
+    //   this.userslist= res;
+    // })
   }
 
   gotoDetails(data:any){

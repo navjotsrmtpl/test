@@ -1,4 +1,4 @@
-<h1 class="txtcenter">User Detail Form</h1>
+<!-- <h1 class="txtcenter">User Detail Form</h1>
 
 <div class="bold">
   <div class="container">
@@ -16,4 +16,7 @@
         <div class="margin"><strong>Company CatchPhrase :</strong> {{userlist.company.catchPhrase}}</div>
     </div>
   </div>
+ -->
 
+ <input type="text" placeholder="enter message" [(ngModel)]="message" style="margin-top: 40px;">
+ <button type="button" (click)="setMessage(message)" > Send Message</button>

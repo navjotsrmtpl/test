@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-userdetail',
@@ -8,13 +9,22 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UserdetailComponent {
   userlist: any=[];
   @Input() userInformation;
+  message:any;
 
-  constructor() {
+  constructor(private service:ServiceService) {
 
    }
 
   ngOnChanges(){
       this.userlist = this.userInformation;
+  }
+
+  setMessage(event){
+    console.log(event);
+    this.message= event;
+    debugger;
+    this.service.setMessage(this.message);
+
   }
 
 }
